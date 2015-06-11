@@ -2,7 +2,7 @@
 
 
 
-Just finished:
+Start HERE:
 
 
-http://bitfountain.io/courses/complete-ios8/lectures/4184
+http://bitfountain.io/courses/complete-ios8/lectures/4185
