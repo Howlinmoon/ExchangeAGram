@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import MobileCoreServices
 
-class FeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+
+class FeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -35,6 +37,22 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     */
 
     
+    @IBAction func snapBarButtonItemTapped(sender: UIBarButtonItem) {
+        
+        // is camera available?
+        if UIImagePickerController.isSourceTypeAvailable((UIImagePickerControllerSourceType.Camera)) {
+            println("You are running this with a real camera device")
+            var cameraController = UIImagePickerController()
+            cameraController.delegate = self
+            cameraController.sourceType = UIImagePickerControllerSourceType.Camera
+            let mediaTypes:[AnyObject] = [kUTTypeImage]
+            cameraController.mediaTypes = mediaTypes
+            cameraController.allowsEditing = false
+            
+            self.presentViewController(cameraController, animated: true, completion: nil)
+        }
+        
+    }
     
     // UICollectionViewDataSource protocol requirements
     

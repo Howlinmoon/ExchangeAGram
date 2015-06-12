@@ -15,6 +15,7 @@
 		967234441B29EFA000653D2E /* ExchangeAGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967234431B29EFA000653D2E /* ExchangeAGramTests.swift */; };
 		9672344E1B29F1B300653D2E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672344D1B29F1B300653D2E /* FeedViewController.swift */; };
 		967234501B29F4A300653D2E /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672344F1B29F4A300653D2E /* FeedCell.swift */; };
+		96E53F911B2B3C630084CE4E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E53F901B2B3C630084CE4E /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		967234431B29EFA000653D2E /* ExchangeAGramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeAGramTests.swift; sourceTree = "<group>"; };
 		9672344D1B29F1B300653D2E /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		9672344F1B29F4A300653D2E /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		96E53F901B2B3C630084CE4E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E53F911B2B3C630084CE4E /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +99,7 @@
 		967234281B29EFA000653D2E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				96E53F901B2B3C630084CE4E /* MobileCoreServices.framework */,
 				967234291B29EFA000653D2E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -419,6 +423,7 @@
 				967234491B29EFA000653D2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9672344A1B29EFA000653D2E /* Build configuration list for PBXNativeTarget "ExchangeAGramTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +432,7 @@
 				9672344C1B29EFA000653D2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

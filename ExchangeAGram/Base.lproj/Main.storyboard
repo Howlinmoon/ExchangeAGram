@@ -59,7 +59,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="LYw-St-ogz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="VlG-Uj-PF2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="VlG-Uj-PF2">
+                            <connections>
+                                <action selector="snapBarButtonItemTapped:" destination="BYZ-38-t0r" id="qqy-vi-3LF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="mUs-Se-Hap" id="rPC-aW-AUb"/>
