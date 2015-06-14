@@ -67,7 +67,18 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             
             self.presentViewController(alertController, animated: true, completion: nil)
+        }
     }
+        
+    //UIImagePickerController Delegate
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+        
+        
     
     // UICollectionViewDataSource protocol requirements
     
