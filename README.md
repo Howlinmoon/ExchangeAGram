@@ -1,7 +1,7 @@
 # ExchangeAGram
 
 
-Left Off Here:
+Just finished:
 
 
-http://bitfountain.io/courses/complete-ios8/lectures/4191
+http://bitfountain.io/courses/complete-ios8/lectures/4192
