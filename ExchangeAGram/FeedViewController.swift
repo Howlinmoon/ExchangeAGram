@@ -8,7 +8,7 @@
 
 import UIKit
 import MobileCoreServices
-
+import CoreData
 
 class FeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -73,8 +73,27 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     //UIImagePickerController Delegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         
+        // We get an image here
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         
+        // We convert the image to a JPG here
+        let imageData = UIImageJPEGRepresentation(image, 1.0)
+        
+        // Getting ready for coredata - we need a managed object context first
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        // Create a description
+        let entityDescription = NSEntityDescription.entityForName("FeedItem", inManagedObjectContext: managedObjectContext!)
+        
+        let feedItem = FeedItem(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext!)
+        
+        // Setup our two properties or "fields"
+        feedItem.image = imageData
+        feedItem.caption = "test caption"
+        
+        // Save the new object
+        (UIApplication.sharedApplication().delegate as! AppDelegate).saveContext()
+            
         self.dismissViewControllerAnimated(true, completion: nil)
     }
         
