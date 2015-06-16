@@ -14,10 +14,22 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // The type is required to be AnyObject since Swift does not know what we are returning...
+    var feedArray: [AnyObject] = []
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Manually fetching the results ourselves - instead of using a FetchRequestController
+        let request = NSFetchRequest(entityName: "FeedItem")
+        let appDelegate:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        let context:NSManagedObjectContext = appDelegate.managedObjectContext!
+        
+        // this returns a type "AnyObject"
+        feedArray = context.executeFetchRequest(request, error: nil)!
+        
     }
 
     override func didReceiveMemoryWarning() {
